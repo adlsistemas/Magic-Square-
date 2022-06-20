@@ -30,8 +30,8 @@ namespace ConsoleApp1
                     break;
                 do
                 {
-                    var canDrawY = validatePosY(valueY);
-                    var canDrawX = validatePosX(valueX, valueN);
+                    var canDrawY = ValidatePosY(valueY);
+                    var canDrawX = ValidatePosX(valueX, valueN);
                     if (canDrawY && canDrawX)
                     {
                         if (square[valueY, valueX] == 0)
@@ -63,14 +63,14 @@ namespace ConsoleApp1
             }
         }
 
-        private static bool validatePosY(int value)
+        private static bool ValidatePosY(int value)
         {
             if (value < 0)
                 return false;
             else
                 return true;
         }
-        private static bool validatePosX(int value, int maxValue)
+        private static bool ValidatePosX(int value, int maxValue)
         {
             if (value + 1 > maxValue)
                 return false;
